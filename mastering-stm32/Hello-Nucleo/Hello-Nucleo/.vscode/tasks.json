@@ -1,0 +1,27 @@
+{
+    "version":"2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Flash",
+            "command": "cube",
+            "args": [
+                "-c",
+                "port=SWD",
+                "-d",
+                "build/Debug/Hello-Nucleo.elf",
+                "-hardRst",
+                "-rst",
+                "--start"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": [],
+            "dependsOn": [
+                "Build"
+            ]
+        }
+    ]
+}
